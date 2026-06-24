@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization - IRIM 2026</title>
+
+  <link rel="icon" type="image/png" href="assets/workshop_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page header */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h1 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+
+    .page-header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Intro text */
+    .organization-intro {
+      max-width: 900px;
+      margin-bottom: 2.5rem;
+    }
+
+    .organization-intro h2 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .organization-intro p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* Organizers section */
+    .organizers-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin: 2rem 0 4rem 0;
+    }
+
+    .organizer-card {
+      width: 100%;
+      max-width: 900px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: stretch;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .organizer-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .organizer-photo {
+      width: 180px;
+      min-width: 180px;
+      height: auto;
+      object-fit: cover;
+      border-right: 1px solid #eee;
+    }
+
+    .no-photo {
+      background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .organizer-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .organizer-info h3 {
+      color: var(--primary-blue);
+      margin: 0 0 0.5rem 0;
+      font-size: 1.35rem;
+    }
+
+    .organizer-info .affiliation {
+      color: #555;
+      font-size: 0.95rem;
+      margin: 0 0 1rem 0;
+      line-height: 1.4;
+    }
+
+    .organizer-info .bio {
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 1rem 0;
+    }
+
+    .organizer-info a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .organizer-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 3rem 1rem;
+      }
+
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .organization-intro {
+        padding: 0 1rem;
+      }
+
+      .organizers-list {
+        padding: 0 1rem;
+      }
+
+      .organizer-card {
+        flex-direction: column;
+        max-width: 100%;
+      }
+
+      .organizer-photo {
+        width: 100%;
+        height: 220px;
+        min-width: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .no-photo {
+        height: 180px;
+      }
+
+      .organizer-info {
+        padding: 1.25rem;
+      }
+
+      .organizer-info h3 {
+        font-size: 1.2rem;
+      }
+
+      .organizer-info .bio {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="assets/irim-logo.png" alt="IRIM 2026 Logo" class="logo" />
+      <img src="assets/fit4medrob.png" alt="Fit4MedRob" class="fit4med-logo" />
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="program.html">Program</a>
+      <a href="organization.html" class="active">Organization</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="main-title">Organization</h1>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <section class="organization-intro">
+      <h2>Organizing Committee</h2>
+    </section>
+
+    <section class="organizers-list">
+
+      <div class="organizer-card">
+        <img src="organizers/martagherardini.jpg" alt="Dr. Marta Gherardini" class="organizer-photo">
+        <div class="organizer-info">
+          <h3>Marta Gherardini</h3>
+          <p class="affiliation">
+            Organizer<br>
+            Fit4MedRob
+          </p>
+          <p class="bio">
+            Marta Gherardini is involved in the Fit4MedRob initiative, contributing to research activities focused on advanced technologies for rehabilitation, assistive devices, and human–machine interaction. Her work supports the development of innovative solutions for personalized rehabilitation and future clinical applications.
+          </p>
+        </div>
+      </div>
+
+      <div class="organizer-card">
+        <img src="organizers/christiantamantini.jpg" alt="Dr. Christian Tamantini" class="organizer-photo">
+        <div class="organizer-info">
+          <h3>Christian Tamantini</h3>
+          <p class="affiliation">
+            Researcher<br>
+            Consiglio Nazionale delle Ricerche (ISTC-CNR)
+          </p>
+          <p class="bio">
+            Christian Tamantini is a researcher at the National Research Council of Italy. His research interests include rehabilitation robotics, human–robot interaction, multimodal sensing, and the use of artificial intelligence to support assessment, monitoring, and personalized intervention in healthcare and assistive scenarios.
+          </p>
+          <p>
+            <a href="mailto:christian.tamantini@cnr.it">christian.tamantini@cnr.it</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="organizer-card">
+        <div class="organizer-photo no-photo">A. T.</div>
+        <div class="organizer-info">
+          <h3>Andrea Tigrini</h3>
+          <p class="affiliation">
+            Organizer<br>
+            Fit4MedRob
+          </p>
+          <p class="bio">
+            Andrea Tigrini is involved in the Fit4MedRob initiative, contributing to research activities at the intersection of robotics, artificial intelligence, and rehabilitation technologies. His work supports the development of data-driven and intelligent approaches for future clinical and assistive applications.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Fit4MedRob and Future Directions: Young Researchers Shaping Robotics and AI for Rehabilitation &mdash;
+    a <a href="https://www.fit4medrob.it/" target="_blank" style="color: #ffffff; text-decoration: none;">Fit4MedRob</a> event
+
+    <div class="footer-greenbar">
+      <img src="assets/csm_logo_MinisterUR_footer_uniformato_79ee9aff05.png" alt="Ministero Università e Ricerca" title="Ministero Università e Ricerca" />
+      <img src="assets/csm_logo_ItaliaDomani_footer_uniformato_e3479bff07.png" alt="Italia Domani" title="Italia Domani" />
+      <img src="assets/csm_logo_PNC_footer_uniformato_37dd4f6b7d.png" alt="PNC" title="PNC" />
+      <img src="assets/csm_logo_FIT4MEDROB_footer_uniformato_258215c4be.png" alt="Fit4MedRob" title="Fit4MedRob" />
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const body = document.body;
+
+      function toggleMenu() {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mainNav.classList.toggle('active');
+        body.classList.toggle('menu-open');
+        menuToggle.textContent = isExpanded ? '☰' : '✕';
+      }
+
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', toggleMenu);
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (window.innerWidth <= 768 && mainNav.classList.contains('active')) {
+              toggleMenu();
+            }
+          });
+        });
+      }
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (window.innerWidth > 768 && menuToggle && mainNav) {
+            mainNav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            body.classList.remove('menu-open');
+            menuToggle.textContent = '☰';
+          }
+        }, 250);
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

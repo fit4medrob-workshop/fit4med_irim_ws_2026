@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fit4MedRob 2026 - Young Researchers Shaping Robotics and AI for Rehabilitation</title>
+  <meta name="description" content="Fit4MedRob 2026 brings together young researchers shaping robotics and AI for rehabilitation and future directions in medical robotics.">
+
+  <link rel="icon" type="image/png" href="assets/workshop_logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Hero Section */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.03;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .main-title {
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.25;
+    }
+
+    .main-title .title-first-line {
+      display: block;
+    }
+
+    .main-title .title-second-line {
+      display: block;
+      margin-top: 0.35rem;
+    }
+
+    /* About Section */
+    .about-section {
+      background-color: var(--light-bg);
+      padding: 4rem 0;
+    }
+
+    /* Important Dates */
+    .dates-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: var(--box-shadow);
+      margin: 2rem 0;
+    }
+
+    .date-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .date-item:last-child {
+      border-bottom: none;
+    }
+
+    .date-label {
+      font-weight: 600;
+      color: var(--primary-blue);
+    }
+
+    /* Topics */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .topic-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--box-shadow);
+      transition: var(--transition);
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .topic-card i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .topic-card span {
+      display: block;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .topics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .date-item {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .date-label {
+        margin-bottom: 0.25rem;
+      }
+
+      .main-title {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="assets/irim-logo.png" alt="IRIM 2026 Logo" class="logo" />
+      <img src="assets/fit4medrob.png" alt="Fit4MedRob" class="fit4med-logo" />
+    </div>
+
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+
+    <nav id="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="program.html">Program</a>
+      <a href="organization.html">Organization</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="main-title">
+        <span class="title-first-line">Fit4MedRob and Future Directions:</span>
+        <span class="title-second-line">Young Researchers Shaping Robotics and AI for Rehabilitation</span>
+      </h1>
+      <h2 class="sub-title">I-RIM 2026</h2>
+      <p style="text-align:center;"><strong>October 23–25, 2026 • Rome, Italy</strong></p>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="abstract-section">
+      <h3>Abstract</h3>
+      <p>
+        TBD
+    </section>
+
+    <section class="topics-section">
+      <h3>Topics of Interest</h3>
+
+      <ul class="topics-grid">
+        <li class="topic-card">
+          <i class="fas fa-user-graduate" style="color: #2e86c1;"></i>
+          <span>Experiences of PhD students and young researchers working within the Fit4MedRob initiative</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-robot" style="color: #27ae60;"></i>
+          <span>Robotic technologies for rehabilitation, assistance, and functional recovery</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-brain" style="color: #8e44ad;"></i>
+          <span>Artificial intelligence and data-driven approaches for personalized rehabilitation</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-hand-paper" style="color: #e67e22;"></i>
+          <span>Human–machine interfaces, prosthetics, exoskeletons, and wearable technologies</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-chart-line" style="color: #16a085;"></i>
+          <span>Assessment, monitoring, and quantitative evaluation of motor and cognitive functions</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-people-arrows" style="color: #c0392b;"></i>
+          <span>Translational challenges, clinical perspectives, and future directions beyond the project</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fit4medrob-section">
+      <h3>About Fit4MedRob</h3>
+      <p>
+        <strong><a href="https://www.fit4medrob.it/" target="_blank" style="color: #0066cc; text-decoration: none;">Fit4MedRob</a></strong>
+        is a national initiative funded by the PNC aiming to enhance research and innovation in medical robotics. The initiative brings together multiple universities and research centers to develop intelligent robotic systems that support healthcare professionals and improve patient outcomes in rehabilitation, surgery, and diagnostics.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Fit4MedRob and Future Directions: Young Researchers Shaping Robotics and AI for Rehabilitation &mdash;
+    a <a href="https://www.fit4medrob.it/" target="_blank" style="color: #ffffff; text-decoration: none;">Fit4MedRob</a> event
+
+    <div class="footer-greenbar">
+      <img src="assets/csm_logo_MinisterUR_footer_uniformato_79ee9aff05.png" alt="Ministero Università e Ricerca" title="Ministero Università e Ricerca" />
+      <img src="assets/csm_logo_ItaliaDomani_footer_uniformato_e3479bff07.png" alt="Italia Domani" title="Italia Domani" />
+      <img src="assets/csm_logo_PNC_footer_uniformato_37dd4f6b7d.png" alt="PNC" title="PNC" />
+      <img src="assets/csm_logo_FIT4MEDROB_footer_uniformato_258215c4be.png" alt="Fit4MedRob" title="Fit4MedRob" />
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/menu.js"></script>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
