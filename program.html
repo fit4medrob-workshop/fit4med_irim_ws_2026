@@ -146,6 +146,7 @@
     .tbc {
       color: #777;
       font-style: italic;
+      font-weight: 400;
     }
 
     /* Speaker cards */
@@ -162,6 +163,8 @@
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .speaker-card:hover {
@@ -169,8 +172,26 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
 
+    .speaker-photo {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      border-bottom: 1px solid #eee;
+      background-color: #f3f4f6;
+    }
+
+    .speaker-photo.contain {
+      object-fit: contain;
+      padding: 0.75rem;
+      box-sizing: border-box;
+    }
+
     .speaker-info {
       padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .speaker-info h3 {
@@ -181,6 +202,7 @@
 
     .mission-label {
       display: inline-block;
+      width: fit-content;
       margin-bottom: 0.75rem;
       padding: 0.25rem 0.75rem;
       background: #f0f7ff;
@@ -231,6 +253,10 @@
 
       .speakers-grid {
         grid-template-columns: 1fr;
+      }
+
+      .speaker-photo {
+        height: 240px;
       }
 
       .program-table th,
@@ -343,6 +369,7 @@
       <div class="speakers-grid">
 
         <div class="speaker-card" id="spk-aprile">
+          <img src="assets/aprile.jpg" alt="Irene Aprile" class="speaker-photo contain">
           <div class="speaker-info">
             <h3>Irene Aprile <span class="tbc">(TBC)</span></h3>
             <span class="mission-label">Mission 1</span>
@@ -354,6 +381,7 @@
         </div>
 
         <div class="speaker-card" id="spk-controzzi">
+          <img src="assets/marco_controzzi.jpg" alt="Marco Controzzi" class="speaker-photo contain">
           <div class="speaker-info">
             <h3>Marco Controzzi</h3>
             <span class="mission-label">Mission 2</span>
@@ -365,6 +393,7 @@
         </div>
 
         <div class="speaker-card" id="spk-orlandini">
+          <img src="assets/andreaorlandini.jpg" alt="AndreA Orlandini" class="speaker-photo contain">
           <div class="speaker-info">
             <h3>AndreA Orlandini</h3>
             <span class="mission-label">Mission 3</span>
