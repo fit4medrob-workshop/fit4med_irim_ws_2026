@@ -35,8 +35,8 @@
 
     /* Intro text */
     .organization-intro {
-      max-width: 900px;
-      margin-bottom: 2.5rem;
+      max-width: 1200px;
+      margin-bottom: 1.5rem;
     }
 
     .organization-intro h2 {
@@ -53,35 +53,40 @@
 
     /* Organizers section */
     .organizers-list {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: stretch;
       gap: 1.5rem;
-      margin: 2rem 0 4rem 0;
+      width: 100%;
+      max-width: 1200px;
+      margin: 1.5rem auto 4rem auto;
     }
 
     .organizer-card {
       width: 100%;
-      max-width: 900px;
+      max-width: none;
       background: white;
-      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-top: 5px solid var(--primary-blue);
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
       display: flex;
       align-items: stretch;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .organizer-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
     }
 
     .organizer-photo {
-      width: 180px;
-      min-width: 180px;
+      width: 145px;
+      min-width: 145px;
       height: auto;
       object-fit: cover;
+      object-position: center top;
       border-right: 1px solid #eee;
     }
 
@@ -97,40 +102,56 @@
     }
 
     .organizer-info {
-      padding: 1.5rem;
+      padding: 1.15rem 1.25rem;
       display: flex;
       flex-direction: column;
     }
 
     .organizer-info h3 {
       color: var(--primary-blue);
-      margin: 0 0 0.5rem 0;
-      font-size: 1.35rem;
+      margin: 0 0 0.35rem 0;
+      font-size: 1.25rem;
     }
 
     .organizer-info .affiliation {
       color: #555;
-      font-size: 0.95rem;
-      margin: 0 0 1rem 0;
-      line-height: 1.4;
+      font-size: 0.88rem;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.35;
+      font-weight: 500;
     }
 
     .organizer-info .bio {
       color: #444;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin: 0 0 1rem 0;
+      font-size: 0.88rem;
+      line-height: 1.48;
+      margin: 0 0 0.85rem 0;
+    }
+
+    .organizer-info p:last-child {
+      margin-top: auto;
+      margin-bottom: 0;
+      padding-top: 0.4rem;
     }
 
     .organizer-info a {
       color: var(--accent-color);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.86rem;
+      font-weight: 500;
       word-break: break-all;
     }
 
     .organizer-info a:hover {
       text-decoration: underline;
+    }
+
+    /* Tablet */
+    @media (max-width: 1024px) {
+      .organizers-list {
+        grid-template-columns: 1fr;
+        max-width: 850px;
+      }
     }
 
     /* Mobile */
@@ -148,20 +169,19 @@
       }
 
       .organizers-list {
+        grid-template-columns: 1fr;
         padding: 0 1rem;
       }
 
       .organizer-card {
         flex-direction: column;
-        max-width: 100%;
       }
 
       .organizer-photo {
         width: 100%;
-        height: 220px;
-        min-width: auto;
-        border-right: none;
-        border-bottom: 1px solid #eee;
+        height: 260px;
+        object-fit: cover;
+        object-position: center 22%;
       }
 
       .no-photo {
@@ -182,7 +202,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="logo-container">
@@ -214,15 +233,18 @@
     <section class="organizers-list">
 
       <div class="organizer-card">
-        <img src="organizers/Gherardini.png" alt="Dr. Marta Gherardini" class="organizer-photo">
+        <img src="organizers/gherardini.jpg" alt="Dr. Marta Gherardini" class="organizer-photo">
         <div class="organizer-info">
           <h3>Marta Gherardini</h3>
           <p class="affiliation">
-            Organizer<br>
-            Fit4MedRob
+            Assistant Professor<br>
+            The BioRobotics Institute, Scuola Superiore Sant'Anna, Italy
           </p>
           <p class="bio">
-            Marta Gherardini is involved in the Fit4MedRob initiative, contributing to research activities focused on advanced technologies for rehabilitation, assistive devices, and human–machine interaction. Her work supports the development of innovative solutions for personalized rehabilitation and future clinical applications.
+            Marta Gherardini is an Assistant Professor at The BioRobotics Institute of Scuola Superiore Sant'Anna, Pisa, Italy. Her research focuses on biomedical robotics, prosthetics, and human–machine interfaces, with particular emphasis on developing next-generation control and sensory feedback technologies for upper-limb prostheses based on implantable magnets. She received her PhD in Biorobotics with honors from Scuola Superiore Sant'Anna in 2022, and has contributed to several national and European research projects on wearable robotics and prosthetic technologies. She has authored and co-authored numerous publications in leading international journals, including Science Robotics and Science Advances, serves as Associate Editor for IEEE Transactions on Neural Systems and Rehabilitation Engineering, and is actively involved in the international robotics and rehabilitation research community.  
+          </p>
+          <p>
+            <a href="mailto:marta.gherardini@santannapisa.it">marta.gherardini@santannapisa.it </a>
           </p>
         </div>
       </div>
@@ -232,17 +254,14 @@
         <div class="organizer-info">
           <h3>Chiara Livolsi</h3>
           <p class="affiliation">
-            Organizer<br>
-            Fit4MedRob
+            Researcher<br>
+            The BioRobotics Institute, Scuola Superiore Sant'Anna, Italy
           </p>
           <p class="bio">
             Chiara Livolsi is involved in the Fit4MedRob initiative, contributing to research activities focused on advanced technologies for rehabilitation, assistive devices, and human–machine interaction. Her work supports the development of innovative solutions for personalized rehabilitation and future clinical applications.
           </p>
         </div>
       </div>
-
-
-
 
       <div class="organizer-card">
         <img src="organizers/christiantamantini.jpg" alt="Dr. Christian Tamantini" class="organizer-photo">
@@ -253,8 +272,7 @@
             Consiglio Nazionale delle Ricerche (ISTC-CNR)
           </p>
           <p class="bio">
-            Christian Tamantini is a researcher at the National Research Council of Italy. His research interests include rehabilitation robotics, human–robot interaction, multimodal sensing, and the use of artificial intelligence to support assessment, monitoring, and personalized intervention in healthcare and assistive scenarios.
-          </p>
+            Christian Tamantini is a researcher at the National Research Council of Italy. His research focuses on rehabilitation robotics, human–robot interaction, multimodal sensing, and artificial intelligence methods for assessment, monitoring, and personalized intervention in healthcare and assistive scenarios. His work combines physiological, kinematic, and behavioral data with computational models and adaptive robotic systems, with applications in rehabilitation, occupational safety, and long-term user support. He has contributed to national and European research projects and is involved in teaching and student supervision in robotics and bioengineering. He also serves as Associate Editor for Frontiers in Digital Health, Discover Robotics, and Discover Artificial Intelligence.          </p>
           <p>
             <a href="mailto:christian.tamantini@cnr.it">christian.tamantini@cnr.it</a>
           </p>
@@ -262,15 +280,18 @@
       </div>
 
       <div class="organizer-card">
-        <img src="organizers/tigrini.jpeg" alt="Dr. Andrea Tigrini" class="organizer-photo">
+        <img src="organizers/tigrini.jpg" alt="Dr. Andrea Tigrini" class="organizer-photo">
         <div class="organizer-info">
           <h3>Andrea Tigrini</h3>
           <p class="affiliation">
-            Organizer<br>
-            Fit4MedRob
+            Assistant Professor<br>
+            Department of Information Engineering, Università Politecnica delle Marche, Italy
           </p>
           <p class="bio">
-            Andrea Tigrini is involved in the Fit4MedRob initiative, contributing to research activities at the intersection of robotics, artificial intelligence, and rehabilitation technologies. His work supports the development of data-driven and intelligent approaches for future clinical and assistive applications.
+            Andrea Tigrini is a researcher in Bioengineering at the Università Politecnica delle Marche, Italy. His scientific activity focuses on developing models and algorithms for prosthetic control, human–machine interfaces based on EMG and wearable sensors, integrating physics-based and AI approaches. He was a JSPS Postdoctoral Fellow at Kyoto University (Japan) and is the author of more than 50 publications in international journals and conference proceedings. He currently serves as Associate Editor for the Journal of NeuroEngineering and Rehabilitation. He is a member of IEEE, the Italian National Group of Bioengineering (GNB), the Italian Society of Clinical Movement Analysis (SIAMOC), and I-RIM – Institute of Robotics and Intelligent Machines.
+          </p>
+          <p>
+            <a href="mailto:a.tigrini@staff.univpm.it">a.tigrini@staff.univpm.it</a>
           </p>
         </div>
       </div>
