@@ -51,6 +51,23 @@
       margin-top: 0.35rem;
     }
 
+    /* General Sections */
+    .abstract-section,
+    .format-section,
+    .objectives-section,
+    .topics-section,
+    .fit4medrob-section {
+      margin-bottom: 3rem;
+    }
+
+    .abstract-section p,
+    .format-section p,
+    .objectives-section p,
+    .fit4medrob-section p {
+      line-height: 1.7;
+      text-align: justify;
+    }
+
     /* About Section */
     .about-section {
       background-color: var(--light-bg);
@@ -80,6 +97,24 @@
     .date-label {
       font-weight: 600;
       color: var(--primary-blue);
+    }
+
+    /* Objective List */
+    .objectives-list {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      box-shadow: var(--box-shadow);
+      margin-top: 1.5rem;
+    }
+
+    .objectives-list li {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .objectives-list li:last-child {
+      margin-bottom: 0;
     }
 
     /* Topics */
@@ -138,6 +173,13 @@
         font-size: 2rem;
         padding: 0 1rem;
       }
+
+      .abstract-section p,
+      .format-section p,
+      .objectives-section p,
+      .fit4medrob-section p {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -174,7 +216,71 @@
     <section class="abstract-section">
       <h3>Abstract</h3>
       <p>
-        TBD
+        Fit4MedRob represents one of the most interdisciplinary national initiatives in medical robotics,
+        bringing together a broad network of clinical and research centers across Italy. Through its three
+        core missions — Clinical Translation and Innovation, Biorobotic Platforms, and Allied Digital and
+        Next-Generation Components — the Italian research community in robotics, bioengineering, artificial
+        intelligence, and rehabilitation medicine has addressed key challenges related to the development,
+        validation, and clinical translation of modern robot-assisted and AI-driven rehabilitation technologies.
+      </p>
+      <p>
+        As the project approaches its final stages, this workshop aims to present the main outcomes of
+        Fit4MedRob to the broader European and international communities, with a specific focus on the role
+        of PhD students, post-docs, and early-career researchers. The session will connect the strategic vision
+        of senior researchers who coordinated the project missions with the concrete technological and
+        scientific advances delivered by young researchers, highlighting clinical applicability, translational
+        impact, market and clinical readiness, and future research directions beyond the project lifespan.
+      </p>
+    </section>
+
+    <section class="format-section">
+      <h3>Workshop Format</h3>
+      <p>
+        The session will feature invited talks by senior researchers who led the core Fit4MedRob missions,
+        followed by short presentations selected from early-career researchers, including PhD students and
+        post-docs involved in the project. This structure will provide both a high-level overview of the
+        initiative and a direct view of the scientific, technological, and translational contributions developed
+        by the next generation of researchers.
+      </p>
+      <p>
+        The workshop will offer a unique opportunity to discuss the translational impact and future directions
+        of the technologies developed within Fit4MedRob, encouraging dialogue between senior investigators,
+        young researchers, clinicians, engineers, and stakeholders interested in the future of medical robotics
+        and AI-based rehabilitation.
+      </p>
+    </section>
+
+    <section class="objectives-section">
+      <h3>Workshop Objectives and Main Topics</h3>
+      <p>
+        The primary objective of the workshop is to provide a concise yet comprehensive overview of the
+        scientific and technological outcomes of Fit4MedRob. Special emphasis will be placed on bridging
+        strategic project-level perspectives with tangible research outputs, prototypes, methods, and
+        solutions developed by young researchers across the project missions.
+      </p>
+
+      <ul class="objectives-list">
+        <li>
+          Present the main achievements of Fit4MedRob in robot-assisted rehabilitation, medical robotics,
+          AI-driven assessment, and personalized interventions.
+        </li>
+        <li>
+          Highlight the contribution of PhD students, post-docs, and early-career researchers to the
+          development of innovative technologies within the project.
+        </li>
+        <li>
+          Discuss clinical translation, real-world applicability, and readiness for future clinical and
+          industrial exploitation.
+        </li>
+        <li>
+          Foster interaction between senior researchers, young investigators, clinicians, and the broader
+          robotics and rehabilitation communities.
+        </li>
+        <li>
+          Identify future research directions and sustainability pathways for the technologies developed
+          beyond the Fit4MedRob project.
+        </li>
+      </ul>
     </section>
 
     <section class="topics-section">
@@ -183,32 +289,32 @@
       <ul class="topics-grid">
         <li class="topic-card">
           <i class="fas fa-user-graduate" style="color: #2e86c1;"></i>
-          <span>Experiences of PhD students and young researchers working within the Fit4MedRob initiative</span>
+          <span>Experiences and scientific contributions of PhD students, post-docs, and young researchers within Fit4MedRob</span>
+        </li>
+
+        <li class="topic-card">
+          <i class="fas fa-hospital-user" style="color: #c0392b;"></i>
+          <span>Clinical translation, validation, and real-world applicability of robotic and AI-based rehabilitation technologies</span>
         </li>
 
         <li class="topic-card">
           <i class="fas fa-robot" style="color: #27ae60;"></i>
-          <span>Robotic technologies for rehabilitation, assistance, and functional recovery</span>
+          <span>Biorobotic platforms, assistive robots, exoskeletons, prosthetics, and technologies for functional recovery</span>
         </li>
 
         <li class="topic-card">
           <i class="fas fa-brain" style="color: #8e44ad;"></i>
-          <span>Artificial intelligence and data-driven approaches for personalized rehabilitation</span>
-        </li>
-
-        <li class="topic-card">
-          <i class="fas fa-hand-paper" style="color: #e67e22;"></i>
-          <span>Human–machine interfaces, prosthetics, exoskeletons, and wearable technologies</span>
+          <span>Artificial intelligence, data-driven models, and personalized approaches for assessment and rehabilitation</span>
         </li>
 
         <li class="topic-card">
           <i class="fas fa-chart-line" style="color: #16a085;"></i>
-          <span>Assessment, monitoring, and quantitative evaluation of motor and cognitive functions</span>
+          <span>Monitoring, quantitative evaluation, and digital biomarkers of motor, cognitive, and functional outcomes</span>
         </li>
 
         <li class="topic-card">
-          <i class="fas fa-people-arrows" style="color: #c0392b;"></i>
-          <span>Translational challenges, clinical perspectives, and future directions beyond the project</span>
+          <i class="fas fa-lightbulb" style="color: #e67e22;"></i>
+          <span>Future directions, sustainability, market readiness, and exploitation beyond the project lifespan</span>
         </li>
       </ul>
     </section>
@@ -217,7 +323,11 @@
       <h3>About Fit4MedRob</h3>
       <p>
         <strong><a href="https://www.fit4medrob.it/" target="_blank" style="color: #0066cc; text-decoration: none;">Fit4MedRob</a></strong>
-        is a national initiative funded by the PNC aiming to enhance research and innovation in medical robotics. The initiative brings together multiple universities and research centers to develop intelligent robotic systems that support healthcare professionals and improve patient outcomes in rehabilitation, surgery, and diagnostics.
+        is a national initiative funded under the PNC within the broader PNRR framework, aiming to enhance
+        research and innovation in medical robotics. The initiative brings together universities, clinical
+        centers, research institutions, and innovation stakeholders to develop intelligent robotic systems,
+        digital technologies, and AI-based solutions that support healthcare professionals and improve
+        rehabilitation, assistance, diagnostics, and patient outcomes.
       </p>
     </section>
 
